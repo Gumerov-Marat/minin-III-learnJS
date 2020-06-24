@@ -1,27 +1,25 @@
-document.querySelector('#load').addEventListener('click', load)
-
-async function load() {
-  var url = 'https://jsonplaceholder.typicode.com/users'
-
-  // fetch(url)
-  //   .then(function (response) {
-  //     return response.json()
-  //   })
-  //   .then(function (data) {
-  //     var ul = document.querySelector('#list')
-
-  //     var html = data.map(function (item) {
-  //       return '<li>' + item.id + ' ' + item.name + ' (' + item.email + ')</li>'
-  //     })
-
-  //     ul.insertAdjacentHTML('afterbegin', html.join(' '))
-  //   })
-
-  var response = await fetch(url)
-  var data = await response.json()
-
-  var html = data.map(function (item) {
-    return '<li>' + item.id + ' ' + item.name + ' (' + item.email + ')</li>'
+function sleep (ms) {
+  return new Promise(function(resolve){
+    setTimeout(function(){
+      resolve()
+    }, ms);
   })
-  document.querySelector('#list').insertAdjacentHTML('afterbegin', html.join(' '))
 }
+
+sleep(1500).then(function(){
+  console.log('1500');
+})
+
+sleep(3000).then(function () {
+  console.log('3000');
+})
+
+Promise.all([sleep(1500), sleep(3000)]).then(function(){
+  console.log('all');
+  
+})
+
+Promise.race([sleep(1500), sleep(3000)]).then(function () {
+  console.log('race');
+
+})
