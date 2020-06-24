@@ -1,16 +1,27 @@
-// function sayHi(phrase, who) {
-//   alert(phrase + ', ' + who);
-// }
+/*
+  Клиент -> Server -> DataBase -> Server -> Клиент
+*/
 
-// setTimeout(sayHi, 1000, "Привет", "Джон");
+console.log('Клиент: Хочу получить список пользователей');
+console.log('...');
 
-let conter = 0
-
-let interval = setInterval(() => {
-  console.log(++conter);
+setTimeout(function(){
+  console.log('Сервер: запрашиваю список пользователей в БД');
+  console.log('...');
   
-}, 600);
+  setTimeout(function () {
+    console.log('БД: формирую список пользователей');
+    console.log('...');
 
-setInterval(() => {
-  clearInterval(interval)
-}, 3000);
+    setTimeout(function () {
+      console.log('Сервер:трансформирую данные для клиента');
+      console.log('...');
+
+      setTimeout(function () {
+        console.log('Клиент: получил данные и отображаю их');
+        console.log('...');
+      }, 1000);
+    }, 500);
+  }, 500);
+}, 1000);
+
