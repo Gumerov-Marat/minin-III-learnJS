@@ -1,9 +1,0 @@
-{
-  "presets": [
-    ["@babel/presets-env", {
-      "targets": [
-        "Last 5 versions"
-      ]
-    }]
-  ]
-}

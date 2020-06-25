@@ -12,6 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/Gumerov-Marat/minin-III-learnJS.git"
   },
+  "browserslist": "> 0.25%, not dead",
   "keywords": [
     "JS"
   ],
