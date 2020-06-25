@@ -1,5 +1,4 @@
-console.log('Started');
+import { HeaderComponent } from "./components/header.component.js"
 
-async function app() {
-  await fetch('fmk')
-}
+const header = new HeaderComponent('header')
+console.log(header);
