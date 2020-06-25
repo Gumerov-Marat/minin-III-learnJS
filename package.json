@@ -1,0 +1,22 @@
+{
+  "name": "minin-iii-learnjs",
+  "version": "1.0.0",
+  "description": "Курс - Полное руководство для современной разработки. Упражнения. примеры.(часть III)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gumerov-Marat/minin-III-learnJS.git"
+  },
+  "keywords": [
+    "JS"
+  ],
+  "author": "gumerovm74@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gumerov-Marat/minin-III-learnJS/issues"
+  },
+  "homepage": "https://github.com/Gumerov-Marat/minin-III-learnJS#readme"
+}
