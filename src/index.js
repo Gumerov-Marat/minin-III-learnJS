@@ -1,5 +1,4 @@
-console.log('Started');
+import './index.scss';
 
-async function app() {
-  await fetch('fmk')
-}
+// ВАЖНАЯ СТРОКА ДЛЯ ИМПОРТА ФАЙЛОВ В БИЛД НЕ УДАЛЯТь
+require.context('./', true, /\.(png|svg|jpg|gif)$/);
