@@ -1,4 +1,5 @@
-import { HeaderComponent } from "./components/header.component.js"
+import './style'
+import {HeaderComponent} from './components/header.component'
 
 const header = new HeaderComponent('header')
-console.log(header);
+console.log(header)

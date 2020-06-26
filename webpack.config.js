@@ -1,20 +1,22 @@
-
-const HTMLWebpackPlugin = require('html-webpack-plugin')
+const path = require('path')
+const HTMLPlugin = require('html-webpack-plugin')
+const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 
 module.exports = {
   entry: ['@babel/polyfill', './src/index.js'],
   output: {
-    path: __dirname + '/dist',
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].[contenthash].js'
   },
   devServer: {
     contentBase: __dirname + '/dist'
   },
   plugins: [
-    new HTMLWebpackPlugin({
+    new HTMLPlugin({
       filename: 'index.html',
       template: './src/index.html'
-    })
+    }),
+    new CleanWebpackPlugin()
   ],
   resolve: {
     extensions: ['.js']
@@ -22,15 +24,13 @@ module.exports = {
   module: {
     rules: [{
       test: /\.js$/,
-       exclude: /node_modules/,
-        loaders:{
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              '@babel/preset-env'
-            ]
-          }
-        } 
-    }]
+      exclude: /node_modules/,
+      loader: 'babel-loader'
+    },
+    {
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader']
+    }
+  ]
   }
 }

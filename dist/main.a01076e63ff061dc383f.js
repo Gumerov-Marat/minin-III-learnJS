@@ -3553,14 +3553,39 @@ eval("/**\n * Copyright (c) 2014-present, Facebook, Inc.\n *\n * This source cod
 
 /***/ }),
 
+/***/ "./src/components/header.component.js":
+/*!********************************************!*\
+  !*** ./src/components/header.component.js ***!
+  \********************************************/
+/*! exports provided: HeaderComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"HeaderComponent\", function() { return HeaderComponent; });\n/* harmony import */ var _core_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../core/component */ \"./src/core/component.js\");\n\nclass HeaderComponent extends _core_component__WEBPACK_IMPORTED_MODULE_0__[\"Component\"] {\n  constructor(id) {\n    super(id);\n  }\n\n  init() {\n    const btn = this.$el.querySelector('.js-header-start');\n    btn.addEventListener('click', buttonHandler.bind(this));\n  }\n\n}\n\nfunction buttonHandler() {\n  this.hide();\n}\n\n//# sourceURL=webpack:///./src/components/header.component.js?");
+
+/***/ }),
+
+/***/ "./src/core/component.js":
+/*!*******************************!*\
+  !*** ./src/core/component.js ***!
+  \*******************************/
+/*! exports provided: Component */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"Component\", function() { return Component; });\nclass Component {\n  constructor(id) {\n    this.$el = document.getElementById(id);\n    this.init();\n  }\n\n  init() {}\n\n  hide() {\n    this.$el.classList.add('hide');\n  }\n\n  show() {\n    this.$el.classList.remove('hide');\n  }\n\n}\n\n//# sourceURL=webpack:///./src/core/component.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }\n\nfunction _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); }); }; }\n\nconsole.log('Started');\n\nfunction app() {\n  return _app.apply(this, arguments);\n}\n\nfunction _app() {\n  _app = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {\n    return regeneratorRuntime.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            _context.next = 2;\n            return fetch('fmk');\n\n          case 2:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee);\n  }));\n  return _app.apply(this, arguments);\n}\n\n//# sourceURL=webpack:///./src/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n!(function webpackMissingModule() { var e = new Error(\"Cannot find module './style'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n/* harmony import */ var _components_header_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/header.component */ \"./src/components/header.component.js\");\n\n\nconst header = new _components_header_component__WEBPACK_IMPORTED_MODULE_1__[\"HeaderComponent\"]('header');\nconsole.log(header);\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
