@@ -1,5 +1,4 @@
-import './style'
-import {HeaderComponent} from './components/header.component'
+import './index.scss';
 
-const header = new HeaderComponent('header')
-console.log(header)
+// ВАЖНАЯ СТРОКА ДЛЯ ИМПОРТА ФАЙЛОВ В БИЛД НЕ УДАЛЯТь
+require.context('./', true, /\.(png|svg|jpg|gif)$/);
