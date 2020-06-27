@@ -11,7 +11,7 @@ textarea {
   resize: none;
 }
 
-.lds-ripple {  
+.lds-ripple {
   display: inline-block;
   position: relative;
   width: 64px;
