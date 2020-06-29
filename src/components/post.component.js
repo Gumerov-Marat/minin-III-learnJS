@@ -1,7 +1,0 @@
-import {Component} from "../core/component";
-
-export class Postcomponent extends Component {
-  constructor(id) {
-    super(id)
-  }
-}

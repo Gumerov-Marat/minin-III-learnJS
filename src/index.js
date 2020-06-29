@@ -1,9 +1,9 @@
 import './index.scss'
 import {HeaderComponent} from './components/header.component'
-import {NavigationComponent} from "./components/navigation.component"
-import {Createcomponent} from './components/create.component'
-import {Favoritecomponent} from "./components/favorite.component"
-import {Postcomponent} from "./components/post.component";
+import {NavigationComponent} from './components/navigation.component'
+import {CreateComponent} from './components/create.component'
+import {FavoriteComponent} from './components/favorite.component'
+import {PostsComponent} from './components/posts.component'
 
 
 
@@ -12,18 +12,16 @@ import {Postcomponent} from "./components/post.component";
 require.context('./', true, /\.(png|svg|jpg|gif)$/);
 //-----------------------------------------------------------------------------
 
-const header = new HeaderComponent('header')
-console.log(header)
+new HeaderComponent('header')
 
 const navigation = new NavigationComponent('navigation')
 
-const posts = new Postcomponent('posts')
-const create = new Createcomponent('create')
-const favorite = new Favoritecomponent('favorite')
+const posts = new PostsComponent('posts')
+const create = new CreateComponent('create')
+const favorite = new FavoriteComponent('favorite')
 
-// регистрация tabs
 navigation.registerTabs([
   {name: 'create', component: create},
   {name: 'posts', component: posts},
   {name: 'favorite', component: favorite}
-])
+]) 
