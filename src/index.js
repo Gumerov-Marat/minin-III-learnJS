@@ -25,4 +25,4 @@ navigation.registerTabs([
   {name: 'create', component: create},
   {name: 'posts', component: posts},
   {name: 'favorite', component: favorite}
-]) 
+])
