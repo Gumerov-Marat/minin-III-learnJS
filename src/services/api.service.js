@@ -43,4 +43,4 @@ async function useRequest(request) {
   return await response.json()
 }
 
-export const apiService = new ApiService('https://wfm-js.firebaseio.com')
+export const apiService = new ApiService('https://g4mf-page.firebaseio.com/')
